@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather — Real-time forecast & air quality</title>
+    <meta name="description" content="Real-time weather, 3-day forecast, and air quality for any city. Built with vanilla JS and WeatherAPI.">
+    <!-- Open Graph / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Weather — Real-time forecast & air quality">
+    <meta property="og:description" content="Real-time weather, 3-day forecast, and air quality for any city.">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <main>
+        <nav class="navbar navbar-expand-lg navbar-glass">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+                    <span class="brand-icon" aria-hidden="true">◇</span>
+                    <div class="brand-name pt-2">
+                        <h1 class="site-title mb-1">Weather</h1>
+                        <small class="site-description"></small>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="nav-toggle-icon fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#weather">Forecast</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#alerts">Alerts</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section id="weather" class="weather-section">
+            <div class="hero-bg" aria-hidden="true"></div>
+            <div class="container position-relative">
+                <p class="hero-tagline">Real-time weather, 3-day forecast & air quality</p>
+                <form action="#" class="search-form position-relative" role="search">
+                    <input type="search" class="location-field form-control" placeholder="Search city, country or region…" aria-label="Search location">
+                    <button type="submit" id="findBtn" class="btn-primary position-absolute">Find</button>
+                </form>
+                <div class="lang-btns">
+                    <button type="button" data-lang="ar" class="btn-lang">العربية</button>
+                    <button type="button" data-lang="en" class="btn-lang active">English</button>
+                </div>
+
+                <div id="weatherCards" class="weather-cards-wrapper">
+                    <div class="row g-3 g-lg-4">
+                        <div class="col-lg-4"><div class="weather-card-wrap weather-card-1"></div></div>
+                        <div class="col-lg-4"><div class="weather-card-wrap weather-card-2"></div></div>
+                        <div class="col-lg-4"><div class="weather-card-wrap weather-card-3"></div></div>
+                    </div>
+                </div>
+
+                <section id="alerts" class="alerts-section mt-4" aria-label="Weather alerts"></section>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-top">
+                    <form action="#" class="subscribe-form position-relative" aria-label="Subscribe">
+                        <input type="email" class="form-control" placeholder="Your email to get updates…" aria-label="Email">
+                        <button type="submit" id="subscribeBtn" class="btn-primary position-absolute">Subscribe</button>
+                    </form>
+                    <ul class="social-links" role="list">
+                        <li><a href="#" aria-label="Facebook"><span class="fa-brands fa-facebook-f"></span></a></li>
+                        <li><a href="#" aria-label="Twitter"><span class="fa-brands fa-twitter"></span></a></li>
+                        <li><a href="#" aria-label="LinkedIn"><span class="fa-brands fa-linkedin-in"></span></a></li>
+                    </ul>
+                </div>
+                <p class="footer-credit">Built by Eng Mohamed EL-Nawsany · Vanilla JS & WeatherAPI</p>
+            </div>
+        </footer>
+    </main>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
