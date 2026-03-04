@@ -27,7 +27,7 @@ let allItems = [];
 startAPi(country, lang);
 
 async function startAPi(country, lang) {
-  let responseAPI = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=687fe7f05794486b9ec180422252106&q=${country}&days=3&aqi=yes&alerts=yes&lang=${lang}`);
+  let responseAPI = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=687fe7f05794486b9ec180422252106&q=${country}&days=3&aqi=yes&alerts=yes&lang=${lang}`);
   allItems = await responseAPI.json();
   console.log(allItems);
   getData();
